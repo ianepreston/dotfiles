@@ -1,0 +1,12 @@
+[git_metrics]
+disabled = false
+
+[git_status]
+disabled = false
+ahead = "⇡${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+behind = "⇣${count}"
+
+[container]
+disabled = true
+
