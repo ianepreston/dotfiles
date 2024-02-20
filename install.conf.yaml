@@ -4,5 +4,13 @@
       force: true
 
 - link:
+    ~/.bashrc:
+      path: bashrc
+    ~/.config/fish/config.fish:
+      path: config.fish
+    ~/.config/starship.toml:
+      path: starship.toml
     ~/.gitconfig:
       path: gitconfig
+    ~/.config/nvim:
+      path: neovim
