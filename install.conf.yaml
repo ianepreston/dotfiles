@@ -14,5 +14,8 @@
       path: gitconfig
     ~/.config/nvim:
       path: neovim
-    ~/.config/pypoetry:
-      path: pypoetry
+    ~/.config/pypoetry/config.toml:
+      path: pypoetry/config.toml
+    ~/.config/fish/completions/poetry.fish:
+      path: pypoetry/poetry.fish
+
