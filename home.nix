@@ -20,7 +20,19 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = [
-    pkgs.htop
+    pkgs.fish
+    pkgs.tmux
+    pkgs.starship
+    pkgs.neovim
+    pkgs.curl
+    pkgs.wget
+    pkgs.ripgrep
+    pkgs.fd
+    pkgs.lazygit
+    pkgs.neofetch
+    pkgs.jq
+    pkgs.shellcheck
+
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
@@ -44,6 +56,10 @@
     # # symlink to the Nix store copy.
     # ".screenrc".source = dotfiles/screenrc;
     ".gitconfig".source = ./gitconfig;
+    ".bashrc".source = ./bashrc;
+    ".config/fish/config.fish".source = ./config.fish;
+    ".config/starship.toml".source = ./starship.toml;
+    ".config/nvim".source = ./neovim;
 
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
