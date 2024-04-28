@@ -26,12 +26,16 @@
     pkgs.neovim
     pkgs.curl
     pkgs.wget
+    pkgs.gnumake
+    pkgs.gcc
     pkgs.ripgrep
     pkgs.fd
     pkgs.lazygit
     pkgs.neofetch
     pkgs.jq
     pkgs.shellcheck
+    pkgs.direnv
+    pkgs.nix-direnv
 
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
@@ -59,13 +63,29 @@
     ".bashrc".source = ./bashrc;
     ".config/fish/config.fish".source = ./config.fish;
     ".config/starship.toml".source = ./starship.toml;
-    ".config/nvim".source = ./neovim;
 
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
     #   org.gradle.console=verbose
     #   org.gradle.daemon.idletimeout=3600000
     # '';
+  };
+# Uncomment this after you can update to 2.21.3
+#  xdg.configFile = {
+#    nvim = {
+#      source =
+#        config.lib.file.mkOutOfStoreSymlink
+#          "${config.home.homeDirectory}/dotfiles/neovim";
+#      recursive = true;
+#    };
+#  };
+home.activation = {
+# This was using .config and mkOuOfStoreSymlink, but it is broken in recent nix
+# see https://github.com/nix-community/home-manager/issues/4692
+    updateLinks = ''
+      export ROOT="${config.home.homeDirectory}/dotfiles"
+      ln -sf "$ROOT/neovim" .config/nvim
+    '';
   };
 
   # Home Manager can also manage your environment variables through
