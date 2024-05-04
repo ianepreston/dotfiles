@@ -25,6 +25,7 @@
     pkgs.neovim
     pkgs.curl
     pkgs.wget
+    pkgs.unzip
     pkgs.gnumake
     pkgs.gcc
     pkgs.ripgrep
