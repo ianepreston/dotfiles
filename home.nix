@@ -93,6 +93,7 @@
     # # symlink to the Nix store copy.
     # ".screenrc".source = dotfiles/screenrc;
     ".gitconfig".source = ./gitconfig;
+    ".gitconfig-wcb".source = ./gitconfig-wcb;
     ".bashrc".source = ./bashrc;
     ".config/fish/config.fish".source = ./config.fish;
     ".config/starship.toml".source = ./starship.toml;

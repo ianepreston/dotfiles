@@ -13,3 +13,5 @@
 	defaultBranch = main
 [core]
 	editor = nvim
+[includeIf "hasconfig:remote.*.url:git@ssh.dev.azure.com*/**"]
+    path = .gitconfig-wcb
