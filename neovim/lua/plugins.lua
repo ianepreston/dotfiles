@@ -43,6 +43,7 @@ require("lazy").setup({
   -- require("plugins/tokyonight"),
   require("plugins/neo-tree"),
   require("plugins/lazygit"),
+  require("plugins/treesitter-context"),
 
   require("plugins/nord"),
 
