@@ -12,6 +12,8 @@
       path: starship.toml
     ~/.gitconfig:
       path: gitconfig
+    ~/.gitconfig-wcb:
+      path: gitconfig-wcb
     ~/.config/nvim:
       path: neovim
     ~/.config/pypoetry/config.toml:
