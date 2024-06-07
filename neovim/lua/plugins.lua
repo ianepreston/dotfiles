@@ -39,6 +39,7 @@ require("lazy").setup({
   require("plugins/conform"),
 
   require("plugins/cmp"),
+  require("plugins/autopairs"),
 
   -- require("plugins/tokyonight"),
   require("plugins/neo-tree"),
