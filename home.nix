@@ -37,7 +37,7 @@
     pkgs.direnv
     pkgs.nix-direnv
     pkgs.devenv
-
+    pkgs.nixfmt
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
@@ -74,18 +74,18 @@
     #   org.gradle.daemon.idletimeout=3600000
     # '';
   };
-# Uncomment this after you can update to 2.21.3
-#  xdg.configFile = {
-#    nvim = {
-#      source =
-#        config.lib.file.mkOutOfStoreSymlink
-#          "${config.home.homeDirectory}/dotfiles/neovim";
-#      recursive = true;
-#    };
-#  };
-home.activation = {
-# This was using .config and mkOuOfStoreSymlink, but it is broken in recent nix
-# see https://github.com/nix-community/home-manager/issues/4692
+  # Uncomment this after you can update to 2.21.3
+  #  xdg.configFile = {
+  #    nvim = {
+  #      source =
+  #        config.lib.file.mkOutOfStoreSymlink
+  #          "${config.home.homeDirectory}/dotfiles/neovim";
+  #      recursive = true;
+  #    };
+  #  };
+  home.activation = {
+    # This was using .config and mkOuOfStoreSymlink, but it is broken in recent nix
+    # see https://github.com/nix-community/home-manager/issues/4692
     updateLinks = ''
       export ROOT="${config.home.homeDirectory}/dotfiles"
       ln -sf "$ROOT/neovim" .config/nvim
@@ -107,9 +107,7 @@ home.activation = {
   #
   #  /etc/profiles/per-user/ipreston/etc/profile.d/hm-session-vars.sh
   #
-  home.sessionVariables = {
-    EDITOR = "vim";
-  };
+  home.sessionVariables = { EDITOR = "vim"; };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
