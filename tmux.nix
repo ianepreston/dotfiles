@@ -12,13 +12,12 @@
     historyLimit = 100000;
     secureSocket = false;
     escapeTime = 0;
-    plugins = with pkgs;
-      [
-        tmuxPlugins.better-mouse-mode
-        tmuxPlugins.yank
-        tmuxPlugins.vim-tmux-navigator
-        tmuxPlugins.nord
-      ];
+    plugins = with pkgs; [
+      tmuxPlugins.better-mouse-mode
+      tmuxPlugins.yank
+      tmuxPlugins.vim-tmux-navigator
+      tmuxPlugins.nord
+    ];
     extraConfig = ''
       set -ga terminal-overrides ",screen-256color*:Tc"
       set-option -g default-terminal "screen-256color"
