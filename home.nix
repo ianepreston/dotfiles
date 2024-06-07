@@ -36,7 +36,7 @@
     pkgs.shellcheck
     pkgs.direnv
     pkgs.nix-direnv
-    pkgs.devbox
+    pkgs.devenv
 
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
