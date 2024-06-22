@@ -1,10 +1,6 @@
 { config, pkgs, ... }:
 
 {
-  # Home Manager needs a bit of information about you and the paths it should
-  # manage.
-  home.username = "ipreston";
-  home.homeDirectory = "/home/ipreston";
   # Whether to enable settings that make Home Manager work better on GNU/Linux distributions other than NixOS
   targets.genericLinux.enable = true;
 

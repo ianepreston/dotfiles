@@ -21,6 +21,8 @@
 
           # Specify your home configuration modules here, for example,
           # the path to your home.nix.
+          home.username = "ipreston";
+          home.homeDirectory = "/home/ipreston";
           modules = [ ./home.nix ./tmux.nix ];
 
           # Optionally use extraSpecialArgs
@@ -32,6 +34,9 @@
 
         # Specify your home configuration modules here, for example,
         # the path to your home.nix.
+        home.username = "root";
+        home.homeDirectory = "/root";
+
         modules = [ ./home.nix ./tmux.nix ];
 
         # Optionally use extraSpecialArgs
@@ -42,6 +47,8 @@
 
         # Specify your home configuration modules here, for example,
         # the path to your home.nix.
+        home.username = "vscode";
+        home.homeDirectory = "/home/vscode";
         modules = [ ./home.nix ./tmux.nix ];
 
         # Optionally use extraSpecialArgs
