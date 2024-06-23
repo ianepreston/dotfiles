@@ -7,10 +7,10 @@
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
     # # symlink to the Nix store copy.
     # ".screenrc".source = dotfiles/screenrc;
-    # ".gitconfig".source = ./gitconfig;
-    # ".gitconfig-wcb".source = ./gitconfig-wcb;
+    ".gitconfig".source = ./gitconfig;
+    ".gitconfig-wcb".source = ./gitconfig-wcb;
     # ".bashrc".source = ./bashrc;
-    # ".config/fish/config.fish".source = ./config.fish;
+    ".config/fish/config.fish".source = ./config.fish;
     ".config/starship.toml".source = ./starship.toml;
     ".config/pypoetry/config.toml".source = ./pypoetry/config.toml;
     ".config/fish/completions/poetry.fish".source = ./pypoetry/poetry.fish;
