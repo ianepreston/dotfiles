@@ -4,7 +4,8 @@
   # environment.
   home.packages = [
     pkgs.starship
-    pkgs.blesh
+    # pkgs.blesh
+    pkgs.fish
     pkgs.fzf
     pkgs.neovim
     pkgs.curl

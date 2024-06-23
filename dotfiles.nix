@@ -12,7 +12,8 @@
     ".bashrc".source = ./bashrc;
     ".config/starship.toml".source = ./starship.toml;
     ".config/pypoetry/config.toml".source = ./pypoetry/config.toml;
-
+    ".config/fish/config.fish".source = ./config.fish;
+    ".config/fish/completions/poetry.fish".source = ./pypoetry/poetry.fish;
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
     #   org.gradle.console=verbose

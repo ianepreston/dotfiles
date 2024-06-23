@@ -7,6 +7,7 @@
     sensibleOnTop = false;
     shortcut = "a";
     baseIndex = 1;
+    shell = "${pkgs.fish}/bin/fish";
     terminal = "tmux-256color";
     historyLimit = 100000;
     secureSocket = false;
