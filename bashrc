@@ -10,6 +10,14 @@ alias vim='nvim'
 PS1='[\u@\h \W]\$ '
 # Starship for prompt
 eval "$(starship init bash)"
+# keychain for ssh key management, might be better in WSL
+if [ -f $HOME/.ssh/id_rsa ]; then
+    $(which keychain) -q --nogui $HOME/.ssh/id_rsa
+fi
+if [ -f $HOME/.ssh/id_ed25519 ]; then
+    $(which keychain) -q --nogui $HOME/.ssh/id_ed25519
+fi
+source $HOME/.keychain/$(hostname)-sh
 
 # attach blesh
 [[ ${BLE_VERSION-} ]] && ble-attach
