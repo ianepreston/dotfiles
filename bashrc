@@ -11,6 +11,5 @@ PS1='[\u@\h \W]\$ '
 # Starship for prompt
 eval "$(starship init bash)"
 
-eval "$(ssh-agent -s)"
 # attach blesh
 [[ ${BLE_VERSION-} ]] && ble-attach
