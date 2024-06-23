@@ -33,7 +33,7 @@
     pkgs.direnv
     pkgs.nix-direnv
     pkgs.devenv
-    pkgs.devpod
+    # pkgs.devpod
     pkgs.nixfmt
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
