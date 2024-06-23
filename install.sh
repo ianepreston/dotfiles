@@ -1,2 +1,2 @@
 #!/bin/env bash
-echo "not doing anything yet."
+home-manager -b bak switch --flake ~/dotfiles/
