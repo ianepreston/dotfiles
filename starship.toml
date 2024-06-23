@@ -8,5 +8,5 @@ diverged = "⇕⇡${ahead_count}⇣${behind_count}"
 behind = "⇣${count}"
 
 [container]
-disabled = true
+disabled = false
 
