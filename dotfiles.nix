@@ -32,15 +32,15 @@
   #      recursive = true;
   #    };
   #  };
-  # home.activation = {
-  #   # This was using .config and mkOuOfStoreSymlink, but it is broken in recent nix
-  #   # see https://github.com/nix-community/home-manager/issues/4692
-  #   updateLinks = ''
-  #     export ROOT="${config.home.homeDirectory}/dotfiles"
-  #     ln -sf "$ROOT/neovim" .config/nvim
-  #   '';
-  # };
-  #
+  home.activation = {
+    # This was using .config and mkOuOfStoreSymlink, but it is broken in recent nix
+    # see https://github.com/nix-community/home-manager/issues/4692
+    updateLinks = ''
+      export ROOT="${config.home.homeDirectory}/dotfiles"
+      ln -sf "$ROOT/neovim" .config/nvim
+    '';
+  };
+
   # Home Manager can also manage your environment variables through
   # 'home.sessionVariables'. If you don't want to manage your shell through Home
   # Manager then you have to manually source 'hm-session-vars.sh' located at
