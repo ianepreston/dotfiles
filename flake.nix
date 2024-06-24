@@ -27,6 +27,7 @@
             ./tmux.nix
             ./packages.nix
             ./dotfiles.nix
+            ./zsh.nix
           ];
 
           # Optionally use extraSpecialArgs
@@ -40,7 +41,7 @@
         # the path to your home.nix.
 
         modules =
-          [ ./root.nix ./home.nix ./tmux.nix ./packages.nix ./dotfiles.nix ];
+          [ ./root.nix ./home.nix ./packages.nix ./dotfiles.nix ./zsh.nix ];
 
         # Optionally use extraSpecialArgs
         # to pass through arguments to home.nix
@@ -50,7 +51,8 @@
 
         # Specify your home configuration modules here, for example,
         # the path to your home.nix.
-        modules = [ ./vscode.nix ./home.nix ./packages.nix ./dotfiles.nix ];
+        modules =
+          [ ./vscode.nix ./home.nix ./packages.nix ./dotfiles.nix ./zsh.nix ];
 
         # Optionally use extraSpecialArgs
         # to pass through arguments to home.nix
