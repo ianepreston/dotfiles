@@ -8,6 +8,17 @@ alias grep='grep --color=auto'
 alias vi='nvim'
 alias vim='nvim'
 PS1='[\u@\h \W]\$ '
+# Use zsh shell
+if [ -z "${NOZSH}" ] && [ $TERM = "xterm" -o $TERM = "xterm-256color" -o $TERM = "screen" ] && type zsh &> /dev/null
+then
+    export SHELL=$(which zsh)
+    if [[ -o login ]]
+    then
+        exec zsh -l
+    else
+        exec zsh
+    fi
+fi
 # Use fish shell
 # if [[ $(ps --no-header --pid=$PPID --format=comm) != "fish" && -z ${BASH_EXECUTION_STRING} ]]
 # then
