@@ -26,6 +26,12 @@
          fi
          eval `cat $HOME/.ssh/ssh-agent`
       fi
+      if [ -d /usr/share/pyenv ]; then
+        export PYENV_ROOT=/usr/share/pyenv
+        export PATH="$PYENV_ROOT/bin:$PATH"
+        export PATH="$PYENV_ROOT/shims:$PATH"
+        eval "$(pyenv init -)"
+      fi
     '';
     # oh-my-zsh = {
     #   enable = true;
