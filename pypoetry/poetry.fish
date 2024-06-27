@@ -251,3 +251,4 @@ complete -c poetry -n '__fish_seen_subcommand_from update' -l without -d 'The de
 complete -c poetry -n '__fish_seen_subcommand_from version' -l dry-run -d 'Do not update pyproject.toml file'
 complete -c poetry -n '__fish_seen_subcommand_from version' -l next-phase -d 'Increment the phase of the current version'
 complete -c poetry -n '__fish_seen_subcommand_from version' -l short -d 'Output the version number only'
+

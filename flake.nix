@@ -21,7 +21,14 @@
 
           # Specify your home configuration modules here, for example,
           # the path to your home.nix.
-          modules = [ ./ipreston.nix ./home.nix ./tmux.nix ];
+          modules = [
+            ./ipreston.nix
+            ./home.nix
+            ./tmux.nix
+            ./packages.nix
+            ./dotfiles.nix
+            ./zsh.nix
+          ];
 
           # Optionally use extraSpecialArgs
           # to pass through arguments to home.nix
@@ -33,7 +40,8 @@
         # Specify your home configuration modules here, for example,
         # the path to your home.nix.
 
-        modules = [ ./root.nix ./home.nix ./tmux.nix ];
+        modules =
+          [ ./root.nix ./home.nix ./packages.nix ./dotfiles.nix ./zsh.nix ];
 
         # Optionally use extraSpecialArgs
         # to pass through arguments to home.nix
@@ -43,7 +51,8 @@
 
         # Specify your home configuration modules here, for example,
         # the path to your home.nix.
-        modules = [ ./vscode.nix ./home.nix ./tmux.nix ];
+        modules =
+          [ ./vscode.nix ./home.nix ./packages.nix ./dotfiles.nix ./zsh.nix ];
 
         # Optionally use extraSpecialArgs
         # to pass through arguments to home.nix
