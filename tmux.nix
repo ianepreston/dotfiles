@@ -19,9 +19,9 @@
       tmuxPlugins.nord
     ];
     extraConfig = ''
-      set -ga terminal-overrides ",screen-256color*:Tc"
-      set-option -g default-terminal "screen-256color"
+      set -ga terminal-features ",xterm-256color*:RGB"
       set-option -g mouse on
+      set-option -g focus-events on
       set -g status-position top
       # easy-to-remember split pane commands
       bind | split-window -h -c "#{pane_current_path}"
