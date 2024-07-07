@@ -28,8 +28,7 @@ return {
         lua = { "stylua" },
         nix = { "nixfmt" },
         -- Conform can also run multiple formatters sequentially
-        python = { "isort", "black" },
-        --
+        python = { "isort", "ruff_format" },
         -- You can use a sub-list to tell conform to run *until* a formatter
         -- is found.
         -- javascript = { { "prettierd", "prettier" } },
