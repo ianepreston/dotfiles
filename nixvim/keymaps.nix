@@ -81,12 +81,6 @@
         action = "<C-w><C-k>";
         options = { desc = "Move focus to the upper window"; };
       }
-      {
-        mode = "n";
-        key = "<leader>lg";
-        action = "<cmd>LazyGit<cr>";
-        options = { desc = "LazyGit in floating window"; };
-      }
     ];
 
     # https://nix-community.github.io/nixvim/NeovimOptions/autoGroups/index.html

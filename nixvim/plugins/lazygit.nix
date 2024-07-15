@@ -1,3 +1,10 @@
 { config, pkgs, inputs, ... }: {
-  programs.nixvim = { plugins.lazygit = { enable = true; }; };
+  programs.nixvim = {
+    keymaps = [{
+      key = "<leader>lg";
+      action = "<cmd>LazyGit<cr>";
+      options = { desc = "LazyGit"; };
+    }];
+    plugins.lazygit = { enable = true; };
+  };
 }
