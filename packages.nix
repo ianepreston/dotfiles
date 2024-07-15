@@ -7,7 +7,6 @@
     # pkgs.blesh
     pkgs.fish
     pkgs.fzf
-    pkgs.neovim
     pkgs.curl
     pkgs.wget
     pkgs.unzip
