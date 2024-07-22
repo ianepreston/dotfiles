@@ -11,7 +11,6 @@
     ".gitconfig-wcb".source = ./gitconfig-wcb;
     ".bashrc".source = ./bashrc;
     ".config/starship.toml".source = ./starship.toml;
-    ".config/fish/config.fish".source = ./config.fish;
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
     #   org.gradle.console=verbose
