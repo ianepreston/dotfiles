@@ -16,7 +16,7 @@
       tmuxPlugins.better-mouse-mode
       tmuxPlugins.yank
       tmuxPlugins.vim-tmux-navigator
-      tmuxPlugins.nord
+      tmuxPlugins.catppuccin
     ];
     extraConfig = ''
       set -ga terminal-features ",xterm-256color*:RGB"
