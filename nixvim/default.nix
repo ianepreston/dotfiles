@@ -16,6 +16,7 @@
     ./plugins/neotest.nix
     ./plugins/oil.nix
     ./plugins/telescope.nix
+    ./plugins/tmux-navigator.nix
     ./plugins/treesitter.nix
     ./plugins/which-key.nix
   ];
