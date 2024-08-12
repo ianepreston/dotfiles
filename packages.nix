@@ -16,6 +16,7 @@
     pkgs.fd
     pkgs.lazygit
     pkgs.neofetch
+    pkgs.markdownlint-cli
     pkgs.jq
     pkgs.shellcheck
     pkgs.direnv
