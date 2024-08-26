@@ -32,6 +32,7 @@
         export PATH="$PYENV_ROOT/shims:$PATH"
         eval "$(pyenv init -)"
       fi
+      source ~/.taloscomplete.zsh
     '';
     # oh-my-zsh = {
     #   enable = true;
