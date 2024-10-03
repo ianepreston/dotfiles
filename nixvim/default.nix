@@ -31,5 +31,11 @@
     globals.have_nerd_font = true;
 
     luaLoader.enable = true;
+    colorschemes = {
+      catppuccin = {
+        enable = true;
+        settings.flavour = "latte";
+      };
+    };
   };
 }
