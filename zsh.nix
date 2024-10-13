@@ -32,6 +32,7 @@
         export PATH="$PYENV_ROOT/shims:$PATH"
         eval "$(pyenv init -)"
       fi
+      export PATH="$HOME/.local/bin:$PATH"
       source ~/.taloscomplete.zsh
     '';
     # oh-my-zsh = {

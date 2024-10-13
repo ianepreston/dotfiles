@@ -1,4 +1,5 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }:
+{
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
@@ -12,6 +13,12 @@
     ".bashrc".source = ./bashrc;
     ".config/starship.toml".source = ./starship.toml;
     ".taloscomplete.zsh".source = ./taloscomplete.zsh;
+    # Any scripts I add here should be on my path
+    ".local/bin" = {
+      source = ./scripts;
+      recursive = true;
+    };
+
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
     #   org.gradle.console=verbose
