@@ -25,6 +25,8 @@
     pkgs.devpod
     pkgs.nixfmt
     pkgs.keychain
+    pkgs.sops
+    pkgs.age
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
