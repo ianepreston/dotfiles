@@ -23,7 +23,7 @@
     pkgs.nix-direnv
     pkgs.devenv
     pkgs.devpod
-    pkgs.nixfmt
+    pkgs.nixfmt-rfc-style
     pkgs.keychain
     pkgs.sops
     pkgs.age
