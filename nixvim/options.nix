@@ -25,6 +25,13 @@
       # Keep signcolumn on by default
       signcolumn = "yes";
 
+      # Tab defaults (might get overwritten by an LSP server)
+      tabstop = 4;
+      shiftwidth = 4;
+      softtabstop = 0;
+      expandtab = true;
+      smarttab = true;
+
       # Decrease update time
       updatetime = 250;
 
