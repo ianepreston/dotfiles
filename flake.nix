@@ -28,12 +28,12 @@
           # Specify your home configuration modules here, for example,
           # the path to your home.nix.
           modules = [
-	    nixvim.homeManagerModules.nixvim
+            nixvim.homeManagerModules.nixvim
             ./ipreston.nix
             ./home.nix
             ./tmux.nix
             ./packages.nix
-           ./dotfiles.nix
+            ./dotfiles.nix
             ./nixvim
             ./zsh.nix
           ];
@@ -48,13 +48,8 @@
         # Specify your home configuration modules here, for example,
         # the path to your home.nix.
 
-        modules = [
-          ./root.nix
-          ./home.nix
-          ./packages.nix
-          ./dotfiles.nix
-          ./zsh.nix
-        ];
+        modules =
+          [ ./root.nix ./home.nix ./packages.nix ./dotfiles.nix ./zsh.nix ];
 
         # Optionally use extraSpecialArgs
         # to pass through arguments to home.nix
@@ -64,16 +59,54 @@
 
         # Specify your home configuration modules here, for example,
         # the path to your home.nix.
+        modules =
+          [ ./vscode.nix ./home.nix ./packages.nix ./dotfiles.nix ./zsh.nix ];
+
+        # Optionally use extraSpecialArgs
+        # to pass through arguments to home.nix
+      };
+      # WSL
+      homeConfigurations."e975360" = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+
+        # Specify your home configuration modules here, for example,
+        # the path to your home.nix.
         modules = [
-          ./vscode.nix
+          nixvim.homeManagerModules.nixvim
+          ./workwsl.nix
+          ./news.nix
           ./home.nix
+          ./tmux.nix
           ./packages.nix
           ./dotfiles.nix
+          ./nixvim
           ./zsh.nix
         ];
 
         # Optionally use extraSpecialArgs
         # to pass through arguments to home.nix
       };
+      homeConfigurations."e975360@WCB.AB.CA" =
+        home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
+
+          # Specify your home configuration modules here, for example,
+          # the path to your home.nix.
+          modules = [
+            nixvim.homeManagerModules.nixvim
+            ./work.nix
+            ./news.nix
+            ./home.nix
+            ./tmux.nix
+            ./packages.nix
+            ./dotfiles.nix
+            ./nixvim
+            ./zsh.nix
+          ];
+
+          # Optionally use extraSpecialArgs
+          # to pass through arguments to home.nix
+        };
+
     };
 }
