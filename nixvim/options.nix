@@ -1,4 +1,10 @@
-{ config, pkgs, inputs, ... }: {
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
+{
   programs.nixvim = {
     opts = {
       number = true;
@@ -26,8 +32,8 @@
       signcolumn = "yes";
 
       # Tab defaults (might get overwritten by an LSP server)
-      tabstop = 4;
-      shiftwidth = 4;
+      tabstop = 2;
+      shiftwidth = 2;
       softtabstop = 0;
       expandtab = true;
       smarttab = true;
