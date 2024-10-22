@@ -1,4 +1,9 @@
-{ config, pkgs, inputs, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
 
 {
   programs.nixvim = {
@@ -32,9 +37,16 @@
       formattersByFt = {
         lua = [ "stylua" ];
         # Conform can also run multiple formatters sequentially
-        python = [ "isort" "ruff_format" ];
+        python = [
+          "isort"
+          "ruff_format"
+        ];
         # python = [ "ruff" ];
         nix = [ "nixfmt" ];
+        yaml = [
+          "yamllint"
+          "yamlfmt"
+        ];
         #
         # You can use a sublist to tell conform to run *until* a formatter
         # is found
@@ -43,12 +55,15 @@
     };
 
     # https://nix-community.github.io/nixvim/keymaps/index.html
-    keymaps = [{
-      mode = "";
-      key = "<leader>f";
-      action.__raw =
-        "  function()\n    require('conform').format { async = true, lsp_fallback = true }\n  end\n";
-      options = { desc = "[F]ormat buffer"; };
-    }];
+    keymaps = [
+      {
+        mode = "";
+        key = "<leader>f";
+        action.__raw = "  function()\n    require('conform').format { async = true, lsp_fallback = true }\n  end\n";
+        options = {
+          desc = "[F]ormat buffer";
+        };
+      }
+    ];
   };
 }

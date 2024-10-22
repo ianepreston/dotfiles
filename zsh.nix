@@ -35,6 +35,7 @@
       export PATH="$HOME/.local/bin:$PATH"
       source ~/.taloscomplete.zsh
       eval "$(direnv hook zhs)"
+      eval "$(direnv hook zsh)"
     '';
     # oh-my-zsh = {
     #   enable = true;
