@@ -1,4 +1,5 @@
-{ inputs, ... }: {
+{ inputs, ... }:
+{
   imports = [
     ./keymaps.nix
     ./options.nix
@@ -13,6 +14,7 @@
     ./plugins/lint.nix
     ./plugins/lsp.nix
     ./plugins/mini.nix
+    ./plugins/mkdnflow.nix
     ./plugins/neotest.nix
     ./plugins/oil.nix
     ./plugins/telescope.nix
