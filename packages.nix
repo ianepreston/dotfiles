@@ -1,4 +1,5 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }:
+{
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
@@ -6,6 +7,7 @@
     pkgs.starship
     # pkgs.blesh
     pkgs.fish
+    pkgs.dig
     pkgs.fzf
     pkgs.curl
     pkgs.wget
