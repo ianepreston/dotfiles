@@ -8,6 +8,7 @@
     # pkgs.blesh
     pkgs.fish
     pkgs.dig
+    pkgs.whois
     pkgs.fzf
     pkgs.curl
     pkgs.wget
