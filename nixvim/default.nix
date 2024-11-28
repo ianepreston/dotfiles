@@ -9,6 +9,7 @@
     ./plugins/conform.nix
     ./plugins/debug.nix
     ./plugins/gitsigns.nix
+    ./plugins/helm.nix
     ./plugins/indent-blankline.nix
     ./plugins/lazygit.nix
     ./plugins/lint.nix
