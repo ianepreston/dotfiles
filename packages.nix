@@ -13,6 +13,7 @@
     pkgs.curl
     pkgs.wget
     pkgs.unzip
+    pkgs.tree
     pkgs.gnumake
     pkgs.gcc
     pkgs.ripgrep
