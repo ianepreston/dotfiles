@@ -15,6 +15,8 @@
       stylua
       ruff
       isort
+      tflint
+      opentofu
     ];
 
     # Autoformat
@@ -47,10 +49,24 @@
           "yamllint"
           "yamlfmt"
         ];
+        tf = [ "tfmt" ];
+        terraform = [ "tfmt" ];
+        hcl = [ "tfmt" ];
+        tfvars = [ "tfmt" ];
         #
         # You can use a sublist to tell conform to run *until* a formatter
         # is found
         # javascript = [ [ "prettierd" "prettier" ] ];
+      };
+      formatters = {
+        tfmt = {
+          command = "tofu";
+          args = [
+            "fmt"
+            "-"
+          ];
+          strdin = true;
+        };
       };
     };
 
