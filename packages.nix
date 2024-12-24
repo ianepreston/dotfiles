@@ -22,6 +22,7 @@
     pkgs.neofetch
     pkgs.markdownlint-cli
     pkgs.jq
+    pkgs.yq-go
     pkgs.shellcheck
     pkgs.direnv
     pkgs.nix-direnv
