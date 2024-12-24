@@ -13,6 +13,7 @@
     ".bashrc".source = ./bashrc;
     ".config/starship.toml".source = ./starship.toml;
     ".taloscomplete.zsh".source = ./taloscomplete.zsh;
+    ".config/zellij/config.kdl".source = ./zellij.kdl;
     # Any scripts I add here should be on my path
     ".local/bin" = {
       source = ./scripts;

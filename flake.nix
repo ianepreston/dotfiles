@@ -16,31 +16,37 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, nixvim, ... }:
+  outputs =
+    {
+      nixpkgs,
+      home-manager,
+      nixvim,
+      ...
+    }:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
-    in {
-      homeConfigurations."ipreston" =
-        home-manager.lib.homeManagerConfiguration {
-          inherit pkgs;
+    in
+    {
+      homeConfigurations."ipreston" = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
 
-          # Specify your home configuration modules here, for example,
-          # the path to your home.nix.
-          modules = [
-            nixvim.homeManagerModules.nixvim
-            ./ipreston.nix
-            ./home.nix
-            ./tmux.nix
-            ./packages.nix
-            ./dotfiles.nix
-            ./nixvim
-            ./zsh.nix
-          ];
+        # Specify your home configuration modules here, for example,
+        # the path to your home.nix.
+        modules = [
+          nixvim.homeManagerModules.nixvim
+          ./ipreston.nix
+          ./home.nix
+          ./zellij.nix
+          ./packages.nix
+          ./dotfiles.nix
+          ./nixvim
+          ./zsh.nix
+        ];
 
-          # Optionally use extraSpecialArgs
-          # to pass through arguments to home.nix
-        };
+        # Optionally use extraSpecialArgs
+        # to pass through arguments to home.nix
+      };
       # Also create one for if I'm in a devcontainer
       homeConfigurations."root" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
@@ -48,8 +54,13 @@
         # Specify your home configuration modules here, for example,
         # the path to your home.nix.
 
-        modules =
-          [ ./root.nix ./home.nix ./packages.nix ./dotfiles.nix ./zsh.nix ];
+        modules = [
+          ./root.nix
+          ./home.nix
+          ./packages.nix
+          ./dotfiles.nix
+          ./zsh.nix
+        ];
 
         # Optionally use extraSpecialArgs
         # to pass through arguments to home.nix
@@ -59,8 +70,13 @@
 
         # Specify your home configuration modules here, for example,
         # the path to your home.nix.
-        modules =
-          [ ./vscode.nix ./home.nix ./packages.nix ./dotfiles.nix ./zsh.nix ];
+        modules = [
+          ./vscode.nix
+          ./home.nix
+          ./packages.nix
+          ./dotfiles.nix
+          ./zsh.nix
+        ];
 
         # Optionally use extraSpecialArgs
         # to pass through arguments to home.nix
@@ -76,7 +92,7 @@
           ./workwsl.nix
           ./news.nix
           ./home.nix
-          ./tmux.nix
+          ./zellij.nix
           ./packages.nix
           ./dotfiles.nix
           ./nixvim
@@ -86,27 +102,26 @@
         # Optionally use extraSpecialArgs
         # to pass through arguments to home.nix
       };
-      homeConfigurations."e975360@WCB.AB.CA" =
-        home-manager.lib.homeManagerConfiguration {
-          inherit pkgs;
+      homeConfigurations."e975360@WCB.AB.CA" = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
 
-          # Specify your home configuration modules here, for example,
-          # the path to your home.nix.
-          modules = [
-            nixvim.homeManagerModules.nixvim
-            ./work.nix
-            ./news.nix
-            ./home.nix
-            ./tmux.nix
-            ./packages.nix
-            ./dotfiles.nix
-            ./nixvim
-            ./zsh.nix
-          ];
+        # Specify your home configuration modules here, for example,
+        # the path to your home.nix.
+        modules = [
+          nixvim.homeManagerModules.nixvim
+          ./work.nix
+          ./news.nix
+          ./home.nix
+          ./zellij.nix
+          ./packages.nix
+          ./dotfiles.nix
+          ./nixvim
+          ./zsh.nix
+        ];
 
-          # Optionally use extraSpecialArgs
-          # to pass through arguments to home.nix
-        };
+        # Optionally use extraSpecialArgs
+        # to pass through arguments to home.nix
+      };
 
     };
 }
