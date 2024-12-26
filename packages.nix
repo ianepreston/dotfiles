@@ -18,6 +18,7 @@
     pkgs.gcc
     pkgs.ripgrep
     pkgs.fd
+    pkgs.renovate
     pkgs.lazygit
     pkgs.neofetch
     pkgs.markdownlint-cli
