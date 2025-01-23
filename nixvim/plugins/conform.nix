@@ -53,6 +53,7 @@
         terraform = [ "tfmt" ];
         hcl = [ "tfmt" ];
         tfvars = [ "tfmt" ];
+        terraform-vars = [ "tfmt" ];
         #
         # You can use a sublist to tell conform to run *until* a formatter
         # is found
@@ -65,7 +66,7 @@
             "fmt"
             "-"
           ];
-          strdin = true;
+          stdin = true;
         };
       };
     };
