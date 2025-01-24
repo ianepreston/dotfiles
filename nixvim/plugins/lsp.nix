@@ -115,7 +115,7 @@
         # tsserver = {
         #  enable = true;
         #}
-
+        terraformls.enable = true;
         yamlls.enable = true;
         lua-ls = {
           enable = true;
