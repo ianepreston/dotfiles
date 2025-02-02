@@ -65,7 +65,7 @@
             "fmt"
             "-"
           ];
-          strdin = true;
+          stdin = true;
         };
       };
     };

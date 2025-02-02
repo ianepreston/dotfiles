@@ -14,6 +14,7 @@
     pkgs.wget
     pkgs.unzip
     pkgs.tree
+    pkgs.opentofu
     pkgs.gnumake
     pkgs.gcc
     pkgs.ripgrep
