@@ -37,7 +37,7 @@
           nixvim.homeManagerModules.nixvim
           ./ipreston.nix
           ./home.nix
-          ./zellij.nix
+          # ./zellij.nix
           ./packages.nix
           ./dotfiles.nix
           ./nixvim
@@ -92,7 +92,7 @@
           ./workwsl.nix
           ./news.nix
           ./home.nix
-          ./zellij.nix
+          # ./zellij.nix
           ./packages.nix
           ./dotfiles.nix
           ./nixvim
