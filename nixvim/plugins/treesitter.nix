@@ -1,4 +1,9 @@
-{ config, pkgs, inputs, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
 
 {
   programs.nixvim = {
@@ -6,7 +11,7 @@
     # https://nix-community.github.io/nixvim/plugins/treesitter/index.html
     plugins.treesitter = {
       enable = true;
-      indent = true;
+      settings.indent.enable = true;
       folding = false;
       nixvimInjections = true;
       grammarPackages = pkgs.vimPlugins.nvim-treesitter.allGrammars;
@@ -53,8 +58,12 @@
       };
       swap = {
         enable = true;
-        swapNext = { "<leader>a" = "@parameters.inner"; };
-        swapPrevious = { "<leader>A" = "@parameter.outer"; };
+        swapNext = {
+          "<leader>a" = "@parameters.inner";
+        };
+        swapPrevious = {
+          "<leader>A" = "@parameter.outer";
+        };
       };
     };
   };

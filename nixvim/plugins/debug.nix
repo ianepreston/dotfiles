@@ -1,47 +1,24 @@
-{ config, pkgs, inputs, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
 
 {
   programs.nixvim = {
-  # Shows how to use the DAP plugin to debug your code.
-  #
-  # https://nix-community.github.io/nixvim/plugins/dap/index.html
+    # Shows how to use the DAP plugin to debug your code.
+    #
+    # https://nix-community.github.io/nixvim/plugins/dap/index.html
     plugins.dap = {
       enable = true;
 
-      extensions = {
-        # Creates a beautiful debugger UI
-        dap-ui = {
-          enable = true;
-
-          # Set icons to characters that are more likely to work in every terminal.
-          # Feel free to remove or use ones that you like more! :)
-          # Don't feel like these are good choices.
-          icons = { 
-            expanded = "▾";
-            collapsed = "▸";
-            current_frame = "*";
-          };
-
-          controls = {
-            icons = {
-              pause = "⏸";
-              play = "▶";
-              step_into = "⏎";
-              step_over = "⏭";
-              step_out = "⏮";
-              step_back = "b";
-              run_last = "▶▶";
-              terminate = "⏹";
-              disconnect = "⏏";
-            };
-          };
-        };
-
-        # Add your own debuggers here
-        dap-python = {
-          enable = true;
-        };
-      };
+    };
+    plugins.dap-python = {
+      enable = true;
+    };
+    plugins.dap-ui = {
+      enable = true;
     };
 
     # https://nix-community.github.io/nixvim/keymaps/index.html

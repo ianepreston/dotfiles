@@ -20,7 +20,7 @@
       enable = true;
     };
 
-    # https://nix-community.github.io/nixvim/NeovimOptions/index.html?highlight=extraplugi#extraplugins 
+    # https://nix-community.github.io/nixvim/NeovimOptions/index.html?highlight=extraplugi#extraplugins
     extraPlugins = with pkgs.vimPlugins; [
       # NOTE: This is how you would ad a vim plugin that is not implemented in Nixvim, also see extraConfigLuaPre below
       # `neodev` configure Lua LSP for your Neovim config, runtime and plugins
@@ -99,7 +99,7 @@
             };
           };
         };
-        ruff-lsp = {
+        ruff_lsp = {
           enable = true;
           autostart = true;
         };
@@ -117,7 +117,7 @@
         #}
         terraformls.enable = true;
         yamlls.enable = true;
-        lua-ls = {
+        lua_ls = {
           enable = true;
 
           # cmd = {
