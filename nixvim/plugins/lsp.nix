@@ -99,7 +99,7 @@
             };
           };
         };
-        ruff_lsp = {
+        ruff = {
           enable = true;
           autostart = true;
         };
