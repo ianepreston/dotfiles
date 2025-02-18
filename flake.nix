@@ -8,19 +8,12 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixvim = {
-      url = "github:nix-community/nixvim";
-      # If you are not running an unstable channel of nixpkgs, select the corresponding branch of nixvim.
-      # url = "github:nix-community/nixvim/nixos-23.05";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs =
     {
       nixpkgs,
       home-manager,
-      nixvim,
       ...
     }:
     let
@@ -34,14 +27,12 @@
         # Specify your home configuration modules here, for example,
         # the path to your home.nix.
         modules = [
-          nixvim.homeManagerModules.nixvim
           ./ipreston.nix
           ./home.nix
-          # ./zellij.nix
           ./packages.nix
           ./dotfiles.nix
-          ./nixvim
           ./zsh.nix
+          ./neovim.nix
         ];
 
         # Optionally use extraSpecialArgs
@@ -88,14 +79,14 @@
         # Specify your home configuration modules here, for example,
         # the path to your home.nix.
         modules = [
-          nixvim.homeManagerModules.nixvim
+          # nixvim.homeManagerModules.nixvim
           ./workwsl.nix
           ./news.nix
           ./home.nix
           # ./zellij.nix
           ./packages.nix
           ./dotfiles.nix
-          ./nixvim
+          # ./nixvim
           ./zsh.nix
         ];
 
@@ -108,14 +99,14 @@
         # Specify your home configuration modules here, for example,
         # the path to your home.nix.
         modules = [
-          nixvim.homeManagerModules.nixvim
+          # nixvim.homeManagerModules.nixvim
           ./work.nix
           ./news.nix
           ./home.nix
           ./zellij.nix
           ./packages.nix
           ./dotfiles.nix
-          ./nixvim
+          # ./nixvim
           ./zsh.nix
         ];
 
