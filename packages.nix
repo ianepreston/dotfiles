@@ -19,10 +19,12 @@
     pkgs.gcc
     pkgs.ripgrep
     pkgs.fd
+    pkgs.renovate
     pkgs.lazygit
     pkgs.neofetch
     pkgs.markdownlint-cli
     pkgs.jq
+    pkgs.yq-go
     pkgs.shellcheck
     pkgs.direnv
     pkgs.nix-direnv
