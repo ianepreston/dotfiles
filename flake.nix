@@ -35,9 +35,7 @@
       homeConfigurations."e975360@WCB.AB.CA" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [
-          # nixvim.homeManagerModules.nixvim
           ./work.nix
-          ./news.nix
           ./home.nix
           ./packages.nix
           ./dotfiles.nix
