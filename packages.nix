@@ -5,8 +5,6 @@
   # environment.
   home.packages = [
     pkgs.starship
-    # pkgs.blesh
-    pkgs.fish
     pkgs.dig
     pkgs.whois
     pkgs.fzf
@@ -14,39 +12,19 @@
     pkgs.wget
     pkgs.unzip
     pkgs.tree
-    pkgs.opentofu
-    pkgs.gnumake
-    pkgs.gcc
     pkgs.ripgrep
     pkgs.fd
-    pkgs.renovate
     pkgs.lazygit
     pkgs.neofetch
-    pkgs.markdownlint-cli
     pkgs.jq
     pkgs.yq-go
     pkgs.shellcheck
     pkgs.direnv
     pkgs.nix-direnv
-    pkgs.devenv
-    pkgs.devpod
     pkgs.nixfmt-rfc-style
     pkgs.keychain
     pkgs.sops
     pkgs.age
-
-    # # It is sometimes useful to fine-tune packages, for example, by applying
-    # # overrides. You can do that directly here, just don't forget the
-    # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
-    # # fonts?
-    # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
-
-    # # You can also create simple shell scripts directly inside your
-    # # configuration. For example, this adds a command 'my-hello' to your
-    # # environment:
-    # (pkgs.writeShellScriptBin "my-hello" ''
-    #   echo "Hello, ${config.home.username}!"
-    # '')
   ];
 
 }
