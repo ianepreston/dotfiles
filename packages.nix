@@ -25,6 +25,7 @@
     pkgs.keychain
     pkgs.sops
     pkgs.age
+    pkgs.devenv
   ];
 
 }
