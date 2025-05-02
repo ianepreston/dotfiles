@@ -1,2 +1,2 @@
 #!/bin/env bash
-home-manager -b bak switch --flake ~/dotfiles/
+nix shell nixpkgs#home-manager -c home-manager -b bak switch --flake ~/dotfiles/
