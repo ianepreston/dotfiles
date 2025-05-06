@@ -14,6 +14,8 @@
       size = 10000;
     };
     initExtra = ''
+      alias vim="nvim"
+      alias vi="nvim"
       eval "$(starship init zsh)"
       if [ -z "$SSH_AUTH_SOCK" ]; then
          # Check for a currently running instance of the agent
