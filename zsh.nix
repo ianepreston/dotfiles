@@ -13,7 +13,7 @@
       share = true;
       size = 10000;
     };
-    initExtra = ''
+    initContent = ''
       alias vim="nvim"
       alias vi="nvim"
       eval "$(starship init zsh)"
