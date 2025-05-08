@@ -8,21 +8,20 @@
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
     # # symlink to the Nix store copy.
     # ".screenrc".source = dotfiles/screenrc;
-    ".gitconfig".source = ./gitconfig;
-    ".gitconfig-wcb".source = ./gitconfig-wcb;
-    ".bashrc".source = ./bashrc;
-    ".config/starship.toml".source = ./starship.toml;
-    ".taloscomplete.zsh".source = ./taloscomplete.zsh;
+    ".gitconfig".source =
+      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/gitconfig";
+    ".gitconfig-wcb".source =
+      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/gitconfig-wcb";
+    ".bashrc".source =
+      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/bashrc";
+    ".config/starship.toml".source =
+      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/starship.toml";
+    ".taloscomplete.zsh".source =
+      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/taloscomplete.zsh";
     # Any scripts I add here should be on my path
     ".local/bin" = {
       source = ./scripts;
       recursive = true;
     };
-
-    # # You can also set the file content immediately.
-    # ".gradle/gradle.properties".text = ''
-    #   org.gradle.console=verbose
-    #   org.gradle.daemon.idletimeout=3600000
-    # '';
   };
 }
