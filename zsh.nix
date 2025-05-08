@@ -26,6 +26,8 @@
          fi
          eval `cat $HOME/.ssh/ssh-agent`
       fi
+      export PATH="$HOME/.local/bin:$PATH"
+      source ~/.taloscomplete.zsh
       eval "$(direnv hook zsh)"
     '';
   };
