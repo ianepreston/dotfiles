@@ -55,7 +55,7 @@
   };
 
   # Symlink your Neovim configuration (or delete the line to manage .config/nvim directly)
-  # xdg.configFile."nvim".source = config.lib.file.mkOutOfStoreSymlink (builtins.getEnv "HOME" + "/dotfiles/neovim");
+  xdg.configFile."nvim".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/neovim";
 
   # Tools available during activation
   home.extraActivationPath = with pkgs; [
