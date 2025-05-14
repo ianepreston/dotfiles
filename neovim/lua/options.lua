@@ -73,6 +73,10 @@ opt.linebreak = true
 -- opt.colorcolumn = {80, 120}                 -- set line width indication at columns 80 and 120
 opt.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
 
+--- Get quarto to work as markdown
+vim.filetype.add {
+  extension = { qmd = "markdown" },
+}
 -- Next, please see settings/toolset.lua for a list of tools that are installed by default
 -- The dashboard (starting page) can be customized in in settings/dashboard.lua
 -- Keymaps can be customized in settings/keymaps.lua
