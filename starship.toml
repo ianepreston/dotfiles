@@ -10,3 +10,5 @@ behind = "⇣${count}"
 [container]
 disabled = false
 
+[kubernetes]
+disabled = false
