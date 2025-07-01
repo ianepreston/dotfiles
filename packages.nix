@@ -18,6 +18,8 @@
     pkgs.neofetch
     pkgs.jq
     pkgs.yq-go
+    pkgs.gemini-cli
+    pkgs.claude-code
     pkgs.shellcheck
     pkgs.direnv
     pkgs.nix-direnv
