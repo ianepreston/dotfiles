@@ -7,6 +7,7 @@
 {
   programs.neovim = {
     enable = true;
+    defaultEditor = true;
 
     # Often required; don't worry as they are isolated in Neovim environment
     withPython3 = true;
@@ -55,7 +56,8 @@
   };
 
   # Symlink your Neovim configuration (or delete the line to manage .config/nvim directly)
-  xdg.configFile."nvim".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/neovim";
+  xdg.configFile."nvim".source =
+    config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/neovim";
 
   # Tools available during activation
   home.extraActivationPath = with pkgs; [
